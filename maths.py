@@ -24,7 +24,8 @@ def ask_division():
 
 def check_answer(user_input, correct_answer):
     if user_input.strip() == "":
-        print(f"The answer is: {correct_answer}")
+        os.system("clear")
+        print(f"Correct answer is: {correct_answer}")
         return False
     try:
         if int(user_input) == correct_answer:
