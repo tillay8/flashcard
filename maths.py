@@ -9,6 +9,7 @@ def ask_multiplication():
     b = random.randint(1, max_factor)
     correct_answer = a * b
     while True:
+        os.system("clear")
         user_input = input(f"What is {a} * {b}? ")
         if check_answer(user_input, correct_answer):
             break
@@ -18,6 +19,7 @@ def ask_division():
     correct_answer = random.randint(1, max_factor) * b
     a = correct_answer // b
     while True:
+        os.system("clear")
         user_input = input(f"What is {correct_answer} / {b}? ")
         if check_answer(user_input, a):
             break
