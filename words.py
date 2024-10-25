@@ -1,5 +1,4 @@
 import os, random, csv
-from difflib import ndiff
 
 way = 0  # 0: English to German, 1: German to English
 learning = "German"
@@ -15,7 +14,7 @@ while not os.path.exists(filename):
 def repeat(card):
     uinput = input("\033[94m[ok]\033[0m")
     os.system("clear")
-    while (uinput != card[1 ^ way]):
+    while (uinput.lower() != card[1 ^ way].lower()):  # Convert to lowercase
         prompt = f"\033[0m{learning} of " if way == 0 else f"\033[0m{known} of "
         uinput = input(f"{prompt}{card[way]}: ")
         check(card, uinput)
@@ -29,7 +28,7 @@ with open(filename, newline="") as csvfile:
         cards.append(row)
 
 def check(card, answer):
-    if answer == card[1 ^ way]:
+    if answer.lower() == card[1 ^ way].lower():  # Convert to lowercase
         print("\033[92mCorrect!\033[0m")
         os.system("sleep 0.5&&clear")
     elif answer == "":
