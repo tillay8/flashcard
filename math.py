@@ -1,5 +1,7 @@
 import os
 import random
+
+# Set maximum factor for multiplication/division
 max_factor = 12
 os.system("clear")
 
@@ -34,12 +36,12 @@ def check_answer(user_input, correct_answer):
             print(f"\033[31mIncorrect.\033[0m The answer is: {correct_answer}")
             return False
     except ValueError:
-        print("\033[31mInvalid input\033[0m")
+        print("\033[31mInvalid input. Please enter a number.\033[0m")
         return False
 
 while True:
-    operation = random.choice(['multiplication', 'division'])
-    if operation == 'multiplication':
+    operation = random.randint(0, 1)  # 0 for multiplication, 1 for division
+    if operation == 0:
         ask_multiplication()
     else:
         ask_division()
