@@ -28,7 +28,7 @@ def ask_division():
 def check_answer(user_input, correct_answer, a, b, operation):
     if user_input.strip() == "":
         clear_console()
-        print(f"{a} {operation} {b} = {correct_answer}")
+        print(f"{a}{operation}{b} = {correct_answer}")
         input("[ok]")
         return False
     try:
