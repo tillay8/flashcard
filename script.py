@@ -20,11 +20,11 @@ def ask_and_check(current_line, next_line, attempts):
 
 # Open and read the CSV file
 # Yes i know this code is trashy but i only know how to parse csv's
-filename = "script.txt"
+filename = "script.csv"
 while not os.path.exists(filename):
     print(f"\033[31mError: \033[93mFile '{filename}' not found.")
-    os.system("printf '\033[94mValid txt file(s): \033[96m' && ls *.txt")
-    filename = input("\033[36mName of txt file to import: \033[96m")
+    os.system("printf '\033[94mValid csv file(s): \033[96m' && ls *.csv")
+    filename = input("\033[36mName of csv file to import: \033[96m")
 
 lines = []
 with open(filename, newline="") as csvfile:
