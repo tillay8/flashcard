@@ -23,5 +23,5 @@ words:
 - direction can be customized
 - words are stored in a csv, see words.csv for an example
 - umlaute do matter (o ≠ ö)
-
+- to practice cryllic characters download ru.csv and rename it to words.csv
 most of these require a bash terminal, may change later idk
